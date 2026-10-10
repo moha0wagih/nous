@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="NOUS">
+<meta name="theme-color" content="#04050a">
+<link rel="apple-touch-icon" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCAB4AHgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD5WoopQKYgApwFAFPC07CEApQtPC04JVWFcj20u2phHR5ftTsK5BtpCtWDHTClFguQkU0ipitMK1LRVyIikqQimEUhiUUUUgFApwFAFPUU0IVVqRVzQq5qZEq0iWxqpUgSpI4ixAUEk9ABkmti20WZWBSGS5nVQ3lw4PltuwA/f6gdDxWsYXM5SsZUFnJOwVQBn+JztX8zx2x9afPYSQhW27o3XcrqDhlzjPqBn1xW5bafCskUN5dQqnnECzZyWDYwQ7DG3kY659u9TNp9k8oZbuSa1ERRjZxHcY0AIZx3Pr26c9609noZuocz9lkKswQkKu9j6LnGT+JqFo67C90q32Nc6ZJaiaKVGMbLt5K7gF3cHr0JycZxisoaRNc2t3NszNCyMQvRlbIz6Hkdjk+lJ0xxqJ6mAyVGyYq7LCyMVdSrDqCOagZKxcTVMqstMIqd1xUTCs2i0yIiinEUUihwFSKKYoqVBVJEskRasIlRxrXT+HY4NOg/tSWPzpw4S3iH8J/vng4P93g5/CtoRuzGcrInstOs9JiRp7u0a8mTbsYuGtyxABBHcAkk/gKkstWnsLtogkIAdYnWJFk8zazbVUjG7G4ck5PXNRXUd7ewDU57gOkjKIZ2ASR2QYxtHTk8se4z3qs9q9oAzvAZ1cl03EyIQTkMDwCCvv8AeFdPoc9ubckkeaS7kuVdYZHOwx72bgDnDNnj5e54yOtRnbKxdpHlSfed743h+CTtU9zxzwR9OJ3t5Le+mQSs0yqzF4VJySuSMcYGCQT257Ukvlz2hne5YXW/5kYEmTJ6jAwAB1yckngd6dguhmnK7zxpB5DhlcywzkJCq85yWOOnOeo7dKfcqLaNdNu5IGdJD5sqL5rx4QDapB2kcYyM+uajixMiW2IFkMuVnkbaF4PBPTrzk89qsWskkVnd3EdjC+yMxy3WCXiMhwpAJwOAw4HQn60rA31Kd/ZFlFklqkl3EygeSD5hUjIVhtAYj165z2rCmiZGKspVhwQRgiuxgvJJyn2i7lkjeJEujgI6ImRHznOBkfMOw6cVU8Qw215ptpcwBXuok/fvH8/mLwN5YcABvlGcHkVE4XVy4zadmci61Awq3ItV3FcskdKZARRSsKKgsVamjFRLU0faqRLLCDjiuzkvraaxgEUotfsaiSKGEhifu7QSDw+PMcsBwdoOK5TTFje+tllz5ZlQNhN5xkfw/wAX071u6mFu9ennARGeXcEm2qr8kEqfu7fl46Dt2rpp6I5qmrRHd7Jysq26wrvKmXaV8zAXggDG4ck46lj7VYt7qF5CLgjylgdI90AkOeSoOcd8DdnIH5VAsMJu1jkmUoF3SOxOAducAqOh4GQKlX7PcW9xPPMYpkCLFCkY+c9ySMAYA5PUkjjqRsRLaxZsljaGdmmxeMolW4MkhKDOGUhVOWPqTjB9TUESQg28LWM7ziQ+am8gyDjCAYyp6885z04qa21KWzeUMkscy2xt4/JYwFMn7zhRl+/B6nGeBii7vrhtUmvLlrs3O8nfcSkzRuOhZiMlgR0I7U7GVndi2nnwLPeacsqGPcVcSqXhQAbmIxnuPnGMdqorcTvCto0sn2bzN7R7sKW9T+XU9K0L+6uLe9S+SWE+ajBbiCDy1lXlGJUjGSMg8d/WqV5ZPbSMGVliWQoPnVyvpkrxnBHsecdDSY4+ZZtyLeUNsgjilc+Veyh3MCrnKDHDcHB4OTj6VHp88F3etHciVVdtpjWNdrK5IzsGCSMqRjOME1MsNvAwkDW93KSh8thIrQ+oOcYIIwe+DkGqKT+RcR/KZAJ/3lxJb+YcHnABznOG+o9qUtDTfYwLqFoJpIn+9GxQ4OeQcde9VJBWhqUccV5OkKypEsjBFlXa4XPAI7HFUJK5JnTEgaihqKzNBFqeM1XU1KhpoTLsEjROsiEq6EMpHYjkV1M8FrLELy5W7SQiJ45VdJTcZbknsG+9x0G0D1rkY2rpdHNpqmmNp0sLLeQMZbeWJfnZTjcp55x1A69eeOeim+hz1F1JEknu7uRWSSK7Ds+wR4Z2+nUEDJ9sYAqX7V9rsmhll86ZniCbwRsUAqcdhwEBz2A9KfqFjdWhkeNvKEXls6kbSRuKrKcDAweMg5OQe5qC4tf+PqVZ41Ec4SJFLETAk58skZOBjOecMOK3v3Mrpj7meZWaKSZbqN2aRJX6uT8u/J+YH5eh/KrcTzw2sd1bNAzSFonMsYZ5CyfO2XBG0ZC5z97BHJqlYxWlyXjm/c5jI8+SXaiP1BPB6gY29TjjmpZpL0QyCW3kiE7bDJGnlrIx2EI38JAwDt45OaZDXQkaG8vo1uUhErjy28yNQir8vCleFzxkkDn1PNQr5mou4jknZpAsjxxRYDMM7jsT0zwQM/N0FQstuI1NzOZJgfLEHJ2KMjlvY4IAyCM9O79sNrfRvZzSyxoqCSdcqVZ8jcoBDDGeAec5z6UrjRBM8sbymb99Kz/6wyZxIcH5ieW9x69a0GjOmzyk24M8MJuSs2CTGWwVYKPlJH5g84BqoINQtLzyT5sL202VLYKqwIz2OWJ2/pmn63cJaaZEhaB7idQFVZ/Na3QfeO4cKXYt8vPBbPak3ZXL3sjmruRZZpHVdisxIUnOBngZqnIamkNV3NckmdUURtRTWNFZGggNSKahBp6mhMGWUarMMrIwZGZGHRlOCPxqkjYqZHrSLM2jrrCWTxDPKsVujTvFiSNXVHcllBKZ46L07Ek9Kv3cM0MNrNdvc24KxwfaoRuKLzkOQfmIIAxweBzgYPF29zJBKksTtHIhyrKcEH2rSTVnaIL9paIBg3lbC6bxg7xnoT3/AB9a6YzTWu5zyp66FsNLITHLI88mVgihLMGZuQCBjnaSRg4PzfWmyB7OQwzr5io5/crL8m8YyCB35wcc9u1WLC5lvLxY7nUZYbaSNklkkbcjSEFimQOCWOfXvnvUkV0t0trFDHdSPAzSGTzCBGd331deRwufm6bTgnOapakkJlh2NLnyreRjFGBgtCMgtle4IzjnPHWryaZKcQzW4kgs2SS6SKMsfmBODjJyFYZAIA9yDVM3ESXQRo7S9uJoj+937gWIJzls4fJwVwQeMc81Vn1q9jkaeacec0pMlsVK54HLEe4xgnPX1NF11Dlb2NG41O209Llpka5upk2qk/zqBnkMQRkAj2OV/GuXvbyW8uZbmdy8srF3Y9zSXd3LdTyTzPvlkO5mxjJ/CqrvWM53NoQsI7VAxpztUTGsGzZIQmimk0VBQ0Gng1HSg0DJlNSK+KgBpwaqTJaLSvUiyVUDU8PVKRLRqQapNAEXEbqiMiB1zt3dx7jJxnpk0ser3UNobSOXbCQylQoyd2M5PXsPpWYJPel8z3q+dk8iL8+oPMwbaiMFC7kGCQFC4/IfrVVpPeoTJTS9JyGokjPUTPTS1MLVDZSQrNTCaCaYTUNlATRSUUhhRRRQAoNOBoopgOBpQ1FFNCHbqN1FFFwsG6mlqKKAsITTSaKKQDSaSiikMKKKKAP/2Q==">
+<title>NOUS Drive</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500&family=Tajawal:wght@400;500;700&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+/* Layout: one breathing mind filling a black screen; a single status word; everything else is voice. Single dark world by design. */
+:root{
+  color-scheme:dark;
+  --void:#04050a; --ink:#e9ecf4; --dim:#8a90a6; --faint:#4a5068; --line:rgba(160,170,215,.14);
+  --teal:#6fe3dc; --ember:#f0b46a; --violet:#a99bff; --rose:#ff7f9e;
+  --display:'Unbounded','Arial Black',system-ui,sans-serif;
+  --body:'Tajawal',-apple-system,system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+[hidden]{display:none!important}
+html,body{height:100%;margin:0;background:var(--void);color:var(--ink);font-family:var(--body);font-size:16px}
+body{overflow:hidden;overscroll-behavior:none;padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)}
+button,input,textarea{font:inherit;color:inherit}
+canvas{position:fixed;inset:0;width:100%;height:100%;z-index:0}
+.label{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.screen{position:fixed;inset:0;z-index:2;padding:calc(env(safe-area-inset-top,0px) + 22px) 20px calc(env(safe-area-inset-bottom,0px) + 22px);display:flex;flex-direction:column}
+
+/* setup */
+#setup{overflow:auto;background:linear-gradient(to bottom,rgba(4,5,10,.2),rgba(4,5,10,.9) 40%)}
+.brand{margin-top:22vh;margin-bottom:6px;font-family:var(--display);font-weight:300;font-size:40px;letter-spacing:.32em}
+.sub{color:var(--dim);margin:0 0 26px;line-height:1.6;max-width:36ch}
+.fields{display:flex;flex-direction:column;gap:16px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field input,.field textarea{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:4px;padding:13px 14px;outline:none;font-size:16px}
+.field textarea{min-height:90px;resize:vertical;line-height:1.6}
+.hint{font-size:13px;color:var(--faint);line-height:1.5}
+.seg{display:flex;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.seg button{flex:1;background:transparent;border:0;padding:12px 6px;color:var(--dim);font-size:15px}
+.seg button[aria-pressed="true"]{background:rgba(111,227,220,.12);color:var(--teal)}
+details{border-top:1px solid var(--line);padding-top:14px}
+summary{list-style:none;cursor:pointer}
+summary::-webkit-details-marker{display:none}
+details .fields{margin-top:14px}
+.go{margin-top:26px;width:100%;padding:20px;border:0;border-radius:4px;background:var(--ink);color:var(--void);font-family:var(--mono);font-size:14px;letter-spacing:.2em;text-transform:uppercase}
+.go:active{background:var(--teal)}
+.link{background:none;border:0;color:var(--dim);text-decoration:underline;text-underline-offset:4px;padding:14px 0;font-size:15px}
+.warn{color:var(--ember);font-size:14px;line-height:1.6;margin-top:12px}
+.warn b{color:var(--ink);font-weight:500}
+
+/* drive */
+#drive{justify-content:space-between;align-items:center;text-align:center;user-select:none;-webkit-user-select:none}
+.d-top{width:100%;display:flex;justify-content:space-between;align-items:center}
+.clock{font-family:var(--mono);font-size:15px;font-variant-numeric:tabular-nums}
+.d-mid{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:auto;margin-bottom:6vh;width:100%}
+.state{font-family:var(--display);font-weight:300;letter-spacing:.42em;font-size:22px;padding-left:.42em;transition:color .4s}
+.state.think{color:var(--ember)} .state.speak{color:var(--violet)} .state.off{color:var(--faint)}
+.heard{min-height:3.2em;max-width:30ch;font-size:19px;line-height:1.6;color:var(--dim);transition:opacity .6s}
+.said{max-width:32ch;font-size:21px;line-height:1.6;color:var(--ink);font-weight:500}
+.d-bot{width:100%;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.pill{border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:999px;padding:14px 20px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);position:relative;overflow:hidden}
+.pill.end{color:var(--rose);border-color:rgba(255,127,158,.35)}
+.pill.end i{position:absolute;inset:0;background:rgba(255,127,158,.25);transform:scaleX(0);transform-origin:left;transition:transform 1.2s linear}
+.pill.end.hold i{transform:scaleX(1)}
+.tapnote{font-size:13px;color:var(--faint)}
+
+/* minutes */
+#mom{overflow:auto;background:rgba(4,5,10,.94)}
+.doc h2{font-family:var(--display);font-weight:500;font-size:22px;line-height:1.35;margin:16px 0 6px}
+.doc .meta{color:var(--dim);font-size:14px;margin-bottom:18px}
+.doc section{border-top:1px solid var(--line);padding:16px 0}
+.doc h4{margin:0 0 10px}
+.doc p,.doc li{font-size:16px;line-height:1.75;color:#d7dbe8;margin:0 0 6px}
+.doc ul{padding-left:20px;margin:0}
+[dir="rtl"] ul,[dir="rtl"].doc ul{padding-left:0;padding-right:20px}
+.acts{display:flex;flex-direction:column;gap:10px;margin:20px 0 30px}
+.acts button{padding:16px;border-radius:4px;border:1px solid var(--line);background:transparent;font-family:var(--mono);font-size:12.5px;letter-spacing:.16em;text-transform:uppercase}
+.acts button.primary{background:var(--ink);color:var(--void);border-color:var(--ink)}
+#writing{align-items:center;justify-content:flex-end;padding-bottom:18vh}
+#writing p{font-family:var(--mono);letter-spacing:.3em;font-size:12px;color:var(--ember);text-transform:uppercase}
+.toast{position:fixed;left:16px;right:16px;top:calc(env(safe-area-inset-top,0px) + 14px);z-index:9;background:rgba(14,16,28,.96);border:1px solid var(--line);padding:12px 14px;border-radius:4px;font-size:14.5px;line-height:1.6}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<canvas id="mind" aria-hidden="true"></canvas>
+
+<!-- SETUP -->
+<div class="screen" id="setup">
+  <div class="brand">NOUS</div>
+  <p class="sub">A thinking partner for the road. Talk through an idea; it listens, answers through your car speakers, and emails you the minutes.</p>
+  <div class="fields">
+    <div class="field"><label class="label" for="topic">What are you thinking about?</label><input id="topic" placeholder="Optional. You can also just say it." dir="auto"></div>
+    <div class="field"><span class="label">NOUS replies</span>
+      <div class="seg" id="seg-mode"><button type="button" data-v="partner" aria-pressed="true">When I pause</button><button type="button" data-v="listener" aria-pressed="false">Only when called</button></div></div>
+    <div class="field"><span class="label">I'll speak</span>
+      <div class="seg" id="seg-lang"><button type="button" data-v="ar-SA" aria-pressed="true">Arabic</button><button type="button" data-v="en-US" aria-pressed="false">English</button></div></div>
+    <details id="conn">
+      <summary class="label">Settings <span class="hint" id="keyState"></span></summary>
+      <div class="fields">
+        <div class="field"><span class="label">AI engine</span>
+          <div class="seg" id="seg-prov"><button type="button" data-v="openai" aria-pressed="true">ChatGPT</button><button type="button" data-v="anthropic" aria-pressed="false">Claude</button></div></div>
+        <div class="field"><label class="label" for="key" id="keyLabel">OpenAI API key</label><input id="key" type="password" placeholder="sk-…" autocomplete="off"><span class="hint">Saved on this phone once. You won't be asked again.</span></div>
+        <div class="field"><label class="label" for="email">Send minutes to</label><input id="email" type="email" placeholder="you@company.com" autocomplete="email"></div>
+        <div class="field"><span class="label">Minutes language</span>
+          <div class="seg" id="seg-mom"><button type="button" data-v="Arabic" aria-pressed="true">Arabic</button><button type="button" data-v="English" aria-pressed="false">English</button></div></div>
+        <div class="field"><label class="label" for="mtalk">Conversation model</label><input id="mtalk" autocapitalize="off"></div>
+        <div class="field"><label class="label" for="mmom">Minutes model</label><input id="mmom" autocapitalize="off"></div>
+      </div>
+    </details>
+  </div>
+  <div class="warn" id="setupWarn"></div>
+  <button class="go" id="goBtn" type="button">Start drive session</button>
+  <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:0 16px">
+    <button class="link" id="resumeBtn" type="button" hidden>Resume last session</button>
+    <button class="link" id="importBtn" type="button">Import a recording</button>
+  </div>
+  <div id="importBox" hidden>
+    <div class="field" style="margin-top:6px"><label class="label" for="importTx">Paste the transcript</label><textarea id="importTx" dir="auto" placeholder="From Voice Memos: open the recording, tap the transcript icon, select all, copy, paste here."></textarea></div>
+    <button class="go" id="importGo" type="button">Write the minutes</button>
+  </div>
+</div>
+
+<!-- DRIVE -->
+<div class="screen" id="drive" hidden>
+  <div class="d-top"><span class="label">NOUS · Drive</span><span class="clock" id="clock">00:00</span></div>
+  <div class="d-mid">
+    <div class="said" id="said" dir="auto"></div>
+    <div class="state" id="state">LISTENING</div>
+    <div class="heard" id="heard" dir="auto"></div>
+    <div class="tapnote" id="tapnote">Say "نوس" to ask · "خلصنا" to finish</div>
+  </div>
+  <div class="d-bot">
+    <button class="pill" id="muteBtn" type="button">Pause</button>
+    <button class="pill end" id="endBtn" type="button"><i></i><span style="position:relative">Hold to end</span></button>
+  </div>
+</div>
+
+<div class="screen" id="writing" hidden><p>Writing the minutes…</p></div>
+<div class="screen" id="mom" hidden></div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+'use strict';
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const isAr = s => /[؀-ۿ]/.test(s || '');
+const store = { get(k){ try{ return localStorage.getItem('nousd.'+k); }catch(e){ return null; } }, set(k,v){ try{ localStorage.setItem('nousd.'+k,v); }catch(e){} } };
+const mmss = ms => { const s=Math.max(0,Math.floor(ms/1000)); return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0'); };
+function toast(m, ms=4500){ const t=$('#toast'); t.innerHTML=m; t.hidden=false; clearTimeout(toast._t); toast._t=setTimeout(()=>t.hidden=true, ms); }
+function parseJSON(txt){ try{ return JSON.parse(txt); }catch(e){} const f=txt.match(/```(?:json)?\s*([\s\S]*?)```/); if(f){ try{ return JSON.parse(f[1]); }catch(e){} } const a=txt.indexOf('{'), b=txt.lastIndexOf('}'); if(a>=0&&b>a){ try{ return JSON.parse(txt.slice(a,b+1)); }catch(e){} } return null; }
+
+/* ---------- state ---------- */
+const S = { active:false, turns:[], startedAt:0, pausedTotal:0, pausedAt:0, paused:false, pending:'', state:'listen', level:0, cfg:null, busy:false };
+const elapsed = () => S.startedAt ? (S.paused ? S.pausedAt : Date.now()) - S.startedAt - S.pausedTotal : 0;
+function save(){ try{ store.set('session', JSON.stringify({ turns:S.turns, startedAt:S.startedAt, pausedTotal:S.pausedTotal, cfg:{...S.cfg, key:undefined} , savedAt:Date.now() })); }catch(e){} }
+
+/* ---------- canvas mind ---------- */
+const cv=$('#mind'), cx=cv.getContext('2d'); let W,H,DPR;
+function resize(){ DPR=Math.min(2,devicePixelRatio||1); W=innerWidth; H=innerHeight; cv.width=W*DPR; cv.height=H*DPR; cx.setTransform(DPR,0,0,DPR,0,0); }
+addEventListener('resize',resize); resize();
+const P=[]; for(let i=0;i<800;i++){ const u=Math.random()*2-1; P.push({th:Math.random()*6.283, ph:Math.acos(u), o:Math.random()*6.28, s:Math.random()*1.4+.5}); }
+let rot=0, lv=0, heat=0, violet=0;
+const mix=(a,b,t)=>a+(b-a)*t;
+function frame(now){
+  const t=now/1000;
+  heat += ((S.state==='think'?1:0)-heat)*.05; violet += ((S.state==='speak'?1:0)-violet)*.06;
+  lv += (S.level-lv)*.15; rot += .002 + heat*.007 + lv*.004;
+  cx.globalCompositeOperation='source-over'; cx.fillStyle='rgba(4,5,10,.34)'; cx.fillRect(0,0,W,H);
+  const ox=W/2, oy=H*(S.active?0.36:0.2), R=Math.min(W,H)*(S.active?0.26:0.2)*(1+lv*.2);
+  const cr=Math.cos(rot), sr=Math.sin(rot), ct=Math.cos(.35), st=Math.sin(.35);
+  const g=cx.createRadialGradient(ox,oy,0,ox,oy,R*2.2);
+  g.addColorStop(0,`rgba(${Math.round(mix(mix(111,169,violet),240,heat))},${Math.round(mix(mix(160,155,violet),180,heat))},${Math.round(mix(255,106,heat))},${.1+lv*.15})`); g.addColorStop(1,'rgba(4,5,10,0)');
+  cx.fillStyle=g; cx.fillRect(ox-R*2.3,oy-R*2.3,R*4.6,R*4.6);
+  cx.globalCompositeOperation='lighter';
+  for(const p of P){
+    const n=Math.sin(3*p.th+t*.6)*Math.cos(2*p.ph-t*.45)*.5+Math.sin(5*p.ph+p.th*2+t*1.1)*.22;
+    const r=R*(1+n*(.22+heat*.2)+lv*.5*(.5+.5*Math.sin(p.o*3+t*4)));
+    const x=r*Math.sin(p.ph)*Math.cos(p.th), y=r*Math.cos(p.ph), z=r*Math.sin(p.ph)*Math.sin(p.th);
+    const x1=x*cr-z*sr, z1=x*sr+z*cr, y1=y*ct-z1*st, z2=y*st+z1*ct;
+    const f=700/(700+z2), k=Math.max(0,Math.min(1,(z2/R+1)/2)), a=Math.max(.05,Math.min(.9,.12+(f-.7)/.6*.55));
+    const rr=Math.round(mix(mix(mix(111,139,k),200,violet),240,heat)), gg=Math.round(mix(mix(mix(227,123,k),190,violet),180,heat)), bb=Math.round(mix(mix(mix(220,255,k),255,violet),106,heat));
+    cx.fillStyle=`rgba(${rr},${gg},${bb},${a})`; const sz=p.s*f*(1+lv*.6); cx.fillRect(ox+x1*f, oy+y1*f, sz, sz);
+  }
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+
+/* ---------- setup ---------- */
+document.querySelectorAll('.seg').forEach(seg=>seg.addEventListener('click',e=>{ const b=e.target.closest('button'); if(!b) return; seg.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false')); }));
+const segVal = id => document.querySelector(`#${id} [aria-pressed="true"]`).dataset.v;
+function setSeg(id,v){ document.querySelectorAll(`#${id} button`).forEach(b=>b.setAttribute('aria-pressed', b.dataset.v===v?'true':'false')); }
+const PROV={ openai:{label:'OpenAI API key',ph:'sk-…',talk:'gpt-4.1-mini',mom:'gpt-4.1'}, anthropic:{label:'Anthropic API key',ph:'sk-ant-…',talk:'claude-haiku-5-5',mom:'claude-sonnet-5-5'} };
+let curProv=store.get('prov')||'openai';
+function loadProv(p){ curProv=p; store.set('prov',p);
+  document.querySelectorAll('#seg-prov button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===p?'true':'false'));
+  $('#keyLabel').textContent=PROV[p].label; $('#key').placeholder=PROV[p].ph;
+  $('#key').value=store.get('key.'+p)||''; $('#mtalk').value=store.get('mtalk.'+p)||PROV[p].talk; $('#mmom').value=store.get('mmom.'+p)||PROV[p].mom; if(typeof keyState==='function') keyState(); }
+$('#seg-prov').addEventListener('click',e=>{ const b=e.target.closest('button'); if(b) loadProv(b.dataset.v); });
+loadProv(curProv);
+{ const v=store.get('email'); if(v) $('#email').value=v; }
+$('#key').addEventListener('change',()=>{ const k=$('#key').value.trim(); if(k) store.set('key.'+curProv,k); keyState(); });
+['seg-mode','seg-lang','seg-mom'].forEach(id=>{ const v=store.get(id); if(v) setSeg(id,v); });
+function keyState(){ $('#keyState').textContent = ($('#key').value.trim() ? '· key saved ✓' : '· add your API key') + ' · ' + (curProv==='openai'?'ChatGPT':'Claude'); }
+keyState(); $('#key').addEventListener('input',keyState);
+if(!$('#key').value.trim()) $('#conn').open=true;
+try{ const last=JSON.parse(store.get('session')||'null'); if(last && last.turns && last.turns.length && Date.now()-last.savedAt < 6*3600e3) $('#resumeBtn').hidden=false; }catch(e){}
+
+function readCfg(){
+  const c={ topic:$('#topic').value.trim(), mode:segVal('seg-mode'), lang:segVal('seg-lang'), momLang:segVal('seg-mom'), prov:curProv, key:$('#key').value.trim(), email:$('#email').value.trim(), mtalk:$('#mtalk').value.trim()||PROV[curProv].talk, mmom:$('#mmom').value.trim()||PROV[curProv].mom };
+  store.set('key.'+curProv,c.key); store.set('mtalk.'+curProv,c.mtalk); store.set('mmom.'+curProv,c.mmom); store.set('email',c.email); ['seg-mode','seg-lang','seg-mom'].forEach(id=>store.set(id,segVal(id)));
+  return c;
+}
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+function envProblem(){
+  try{ if (window.self!==window.top) return '<b>Opened inside a preview.</b> Open the page in Safari from its link, then add it to your Home Screen.'; }catch(e){}
+  if (!SR) return '<b>Speech recognition is off.</b> On iPhone turn on <b>Settings → General → Keyboard → Enable Dictation</b>, and open this page in <b>Safari</b>.';
+  if (location.protocol==='file:') return '<b>Open this page from its web link</b>, not as a file. The phone blocks the microphone for files.';
+  return null;
+}
+$('#goBtn').addEventListener('click', async ()=>{
+  const c=readCfg(); const p=envProblem();
+  if (p){ $('#setupWarn').innerHTML=p; return; }
+  if (!c.key){ $('#setupWarn').innerHTML='<b>Add your API key</b> in Settings so NOUS can think and talk back.'; $('#conn').open=true; return; }
+  begin(c, null);
+});
+$('#resumeBtn').addEventListener('click', ()=>{
+  const c=readCfg(); const p=envProblem(); if(p){ $('#setupWarn').innerHTML=p; return; }
+  let last=null; try{ last=JSON.parse(store.get('session')); }catch(e){}
+  begin(c, last);
+});
+$('#importBtn').addEventListener('click', ()=>{ $('#importBox').hidden=!$('#importBox').hidden; if(!$('#importBox').hidden) $('#importTx').focus(); });
+$('#importGo').addEventListener('click', async ()=>{
+  const c=readCfg(); const tx=$('#importTx').value.trim();
+  if(!tx){ toast('Paste a transcript first.'); return; }
+  if(!c.key){ $('#setupWarn').innerHTML='<b>Add your API key</b> in Settings first.'; $('#conn').open=true; return; }
+  S.cfg=c; S.turns=[{who:'you',text:tx,t:0}]; S.startedAt=Date.now(); S.imported=true;
+  finish();
+});
+
+/* ---------- audio: unlock, chime, voice ---------- */
+let actx=null;
+function unlockAudio(){
+  try{ actx = actx || new (window.AudioContext||window.webkitAudioContext)(); actx.resume(); const b=actx.createBuffer(1,1,22050), s=actx.createBufferSource(); s.buffer=b; s.connect(actx.destination); s.start(0); }catch(e){}
+  try{ const u=new SpeechSynthesisUtterance(' '); u.volume=0; speechSynthesis.speak(u); }catch(e){}
+}
+function chime(){ if(!actx) return; const n=actx.currentTime; [523.25,783.99].forEach((f,i)=>{ const o=actx.createOscillator(), g=actx.createGain(); o.frequency.value=f; g.gain.setValueAtTime(0,n+i*.12); g.gain.linearRampToValueAtTime(.08,n+i*.12+.04); g.gain.exponentialRampToValueAtTime(.0001,n+i*.12+1.2); o.connect(g).connect(actx.destination); o.start(n+i*.12); o.stop(n+i*.12+1.3); }); }
+let VOICES=[]; const loadV=()=>{ try{ VOICES=speechSynthesis.getVoices(); }catch(e){} }; if('speechSynthesis' in window){ loadV(); speechSynthesis.onvoiceschanged=loadV; }
+function pickVoice(ar){ const w=ar?'ar':'en'; const L=VOICES.filter(v=>(v.lang||'').toLowerCase().replace('_','-').startsWith(w)); const pref=ar?[/maged|majed/i,/ar-sa/i]:[/daniel|arthur|samantha/i,/en-gb/i]; for(const rx of pref){ const v=L.find(v=>rx.test(v.name)||rx.test(v.lang)); if(v) return v; } return L[0]||null; }
+function speakOut(text){
+  return new Promise(res=>{
+    if(!('speechSynthesis' in window)){ res(); return; }
+    const ar=isAr(text), v=pickVoice(ar), u=new SpeechSynthesisUtterance(text);
+    if(v) u.voice=v; u.lang=v?v.lang:(ar?'ar-SA':'en-US'); u.rate=ar?1.0:0.98; u.pitch=.95;
+    const pulse=setInterval(()=>{ S.level=.2+Math.random()*.35; },90);
+    const done=()=>{ clearInterval(pulse); S.level=0; res(); };
+    u.onend=done; u.onerror=done;
+    try{ speechSynthesis.cancel(); speechSynthesis.speak(u); }catch(e){ done(); }
+    setTimeout(done, 4000 + text.length*120); // safety net
+  });
+}
+
+/* ---------- wake lock ---------- */
+let wake=null;
+async function keepAwake(){ try{ if('wakeLock' in navigator){ wake=await navigator.wakeLock.request('screen'); } }catch(e){} }
+document.addEventListener('visibilitychange', ()=>{ if(document.visibilityState==='visible' && S.active){ keepAwake(); if(!S.paused && S.state==='listen') listen(); } });
+
+/* ---------- listening ---------- */
+let rec=null, recOn=false, silenceT=null;
+const RX_END = /(خلصنا|خلاص\s*نوس|انه[يى]\s*الجلس[ةه]|نه[اي]ي[ةه]\s*الجلس[ةه]|end\s+(the\s+)?session|we'?re\s+done)/i;
+const RX_NAME = /(نوس|نوز|نووس|\bnous\b|\bnoose\b)/i;
+const RX_HUSH = /(اسكت|بس\s*خلاص|stop\s+talking)/i;
+function setState(s, label){
+  S.state=s; const el=$('#state');
+  el.textContent = label || ({listen:'LISTENING', think:'THINKING', speak:'SPEAKING', off:'PAUSED'})[s];
+  el.className='state '+({think:'think',speak:'speak',off:'off'}[s]||'');
+}
+function listen(){
+  if(!S.active || S.paused) return;
+  if(!rec){
+    rec=new SR(); rec.lang=S.cfg.lang; rec.continuous=true; rec.interimResults=true;
+    rec.onresult=ev=>{
+      if(S.state!=='listen') return;
+      let interim='', fin='';
+      for(let i=ev.resultIndex;i<ev.results.length;i++){ const r=ev.results[i]; if(r.isFinal) fin+=r[0].transcript+' '; else interim+=r[0].transcript; }
+      if(fin.trim()){ S.pending=(S.pending+' '+fin).trim(); }
+      const show=(S.pending+' '+interim).trim();
+      const h=$('#heard'); h.textContent=show.slice(-160); h.dir=isAr(show)?'rtl':'ltr'; h.style.opacity=1;
+      S.level=Math.min(1,.25+Math.random()*.4); clearTimeout(S._lv); S._lv=setTimeout(()=>S.level=0,250);
+      if(RX_HUSH.test(show)) { try{ speechSynthesis.cancel(); }catch(e){} }
+      clearTimeout(silenceT);
+      silenceT=setTimeout(onPause, S.cfg.mode==='partner' ? 3200 : 1800);
+    };
+    rec.onerror=e=>{
+      if(e.error==='no-speech'||e.error==='aborted') return;
+      if(e.error==='not-allowed'||e.error==='service-not-allowed'){ recOn=false; setState('off','MIC OFF'); toast('<b>Microphone blocked.</b> Settings → Safari → Microphone → Allow. Also make sure Dictation is on (Settings → General → Keyboard).',9000); return; }
+      if(e.error==='network'){ toast('Speech needs a data connection. Retrying…'); }
+    };
+    rec.onend=()=>{ recOn=false; if(S.active && !S.paused && S.state==='listen') setTimeout(()=>{ try{ rec.start(); recOn=true; }catch(e){ needTap(); } },250); };
+  }
+  if(!recOn){ try{ rec.start(); recOn=true; $('#tapnote').textContent = TAPNOTE; }catch(e){ needTap(); } }
+  setState('listen');
+}
+const TAPNOTE='Say "نوس" to ask · "خلصنا" to finish · tap the screen to ask now';
+function needTap(){ $('#tapnote').textContent='Tap anywhere to keep listening'; }
+function stopRec(){ clearTimeout(silenceT); if(rec && recOn){ try{ rec.stop(); }catch(e){} } recOn=false; }
+
+function commitPending(){
+  const text=S.pending.trim(); S.pending='';
+  if(!text) return null;
+  S.turns.push({who:'you', text, t:elapsed()}); save();
+  return text;
+}
+function onPause(){
+  if(S.state!=='listen' || !S.pending.trim()) return;
+  const text=commitPending();
+  if(RX_END.test(text)){ finish(); return; }
+  const called=RX_NAME.test(text);
+  const words=text.split(/\s+/).length;
+  if(called || (S.cfg.mode==='partner' && words>=6)) respond(called ? 'called' : 'pause');
+}
+
+/* ---------- Claude ---------- */
+async function callClaude(model, prompt, max){
+  let r;
+  if((S.cfg.prov||'openai')==='openai'){
+    r=await fetch('https://api.openai.com/v1/chat/completions',{ method:'POST', headers:{'content-type':'application/json','authorization':'Bearer '+S.cfg.key}, body:JSON.stringify({model, messages:[{role:'user',content:prompt}], max_completion_tokens:max, response_format:{type:'json_object'}}) });
+  } else {
+    r=await fetch('https://api.anthropic.com/v1/messages',{ method:'POST', headers:{'content-type':'application/json','x-api-key':S.cfg.key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'}, body:JSON.stringify({model, max_tokens:max, messages:[{role:'user',content:prompt}]}) });
+  }
+  if(!r.ok){ const t=await r.text(); let m=t; try{ const j=JSON.parse(t); m=(j.error&&j.error.message)||t; }catch(e){} throw new Error(r.status+' '+String(m).slice(0,200)); }
+  const d=await r.json();
+  if((S.cfg.prov||'openai')==='openai') return ((d.choices||[])[0]||{}).message?.content||'';
+  return (d.content||[]).filter(c=>c.type==='text').map(c=>c.text).join('');
+}
+function convo(maxChars){ let s=S.turns.map(x=>`${x.who==='you'?'MOE':'NOUS'}: ${x.text}`).join('\n'); if(s.length>maxChars) s='…\n'+s.slice(-maxChars); return s; }
+async function respond(reason){
+  if(S.busy) return; S.busy=true;
+  stopRec(); setState('think');
+  const prompt=`You are NOUS, a sharp creative thinking partner talking with Moe, a senior designer and campaign strategist, while he DRIVES. Your words are spoken aloud through the car speakers.
+
+${S.cfg.topic?`He wants to think about: ${S.cfg.topic}\n`:''}Conversation so far (speech-to-text, may contain misheard words; infer meaning):
+${convo(16000)}
+
+${reason==='called'?'He just called you by name: answer what he asked or give your view now.':'He paused after a thought. Respond only if it helps him think. If he is clearly mid-flow and an interruption would not help, reply with an empty string.'}
+
+How to speak:
+- Match his language. If he speaks Arabic, answer in natural Saudi Hijazi dialect.
+- Maximum 45 words. One idea or one question at a time. No lists, no markdown, no emojis, no preamble, never start with praise.
+- Build on his idea, sharpen it, find the angle he missed, or challenge it when it's weak. Sometimes ask the one question that unlocks it.
+- He is driving: keep it light to listen to, concrete, and easy to hold in mind.
+
+Reply with ONLY JSON: {"reply":"..."}`;
+  let reply='';
+  try{ const j=parseJSON(await callClaude(S.cfg.mtalk, prompt, 400)); reply=(j&&typeof j.reply==='string')?j.reply.trim():''; }
+  catch(e){ toast(/401|403/.test(e.message)?'<b>API key rejected.</b> Check it in Settings.':/404/.test(e.message)?'<b>Model not found.</b> Check model names in Settings.':/429|quota|billing|credit/i.test(e.message)?'<b>No API credit.</b> Add billing at platform.openai.com.':'AI error: '+esc(e.message.slice(0,140)),7000); }
+  if(reply && S.active){
+    S.turns.push({who:'nous', text:reply, t:elapsed()}); save();
+    const sd=$('#said'); sd.textContent=reply; sd.dir=isAr(reply)?'rtl':'ltr';
+    $('#heard').style.opacity=0;
+    setState('speak'); chime(); await new Promise(r=>setTimeout(r,550));
+    await speakOut(reply);
+  }
+  S.busy=false;
+  if(S.active && !S.paused){ S.pending=''; listen(); }
+}
+
+/* ---------- session ---------- */
+function begin(cfg, resume){
+  unlockAudio(); keepAwake();
+  S.cfg=cfg; S.active=true; S.paused=false; S.pending=''; S.imported=false;
+  if(resume){ S.turns=resume.turns||[]; S.startedAt=resume.startedAt||Date.now(); S.pausedTotal=(resume.pausedTotal||0)+(Date.now()-(resume.savedAt||Date.now())); }
+  else { S.turns=[]; S.startedAt=Date.now(); S.pausedTotal=0; }
+  $('#setup').hidden=true; $('#drive').hidden=false; $('#said').textContent=''; $('#heard').textContent='';
+  $('#tapnote').textContent=TAPNOTE;
+  const greet = cfg.lang==='ar-SA' ? (resume?'نكمل من وين وقفنا. تفضل.':'أنا معك. وش في بالك؟') : (resume?'Picking up where we left off. Go ahead.':"I'm with you. What's on your mind?");
+  setState('speak'); chime();
+  setTimeout(async()=>{ await speakOut(greet); listen(); }, 500);
+  (function tick(){ if(!S.active) return; $('#clock').textContent=mmss(elapsed()); setTimeout(tick,1000); })();
+}
+$('#drive').addEventListener('click', e=>{
+  if(e.target.closest('.pill')) return;
+  if(!S.active) return;
+  if(S.state==='speak'){ try{ speechSynthesis.cancel(); }catch(err){} return; }
+  if(S.paused){ togglePause(); return; }
+  if(S.state==='listen'){
+    if(!recOn){ listen(); return; }
+    if(S.pending.trim()){ clearTimeout(silenceT); const t=commitPending(); if(RX_END.test(t)){ finish(); return; } }
+    respond('called');
+  }
+});
+function togglePause(){
+  S.paused=!S.paused;
+  if(S.paused){ S.pausedAt=Date.now(); stopRec(); try{ speechSynthesis.cancel(); }catch(e){} setState('off'); $('#muteBtn').textContent='Resume'; }
+  else { S.pausedTotal+=Date.now()-S.pausedAt; $('#muteBtn').textContent='Pause'; listen(); }
+}
+$('#muteBtn').addEventListener('click', togglePause);
+// hold to end
+let holdT=null; const eb=$('#endBtn');
+const holdStart=e=>{ e.preventDefault(); eb.classList.add('hold'); holdT=setTimeout(()=>{ eb.classList.remove('hold'); finish(); },1200); };
+const holdEnd=()=>{ eb.classList.remove('hold'); clearTimeout(holdT); };
+eb.addEventListener('pointerdown',holdStart); ['pointerup','pointerleave','pointercancel'].forEach(ev=>eb.addEventListener(ev,holdEnd));
+
+/* ---------- minutes ---------- */
+async function finish(){
+  if(S.finishing) return; S.finishing=true;
+  if(S.pending.trim()) commitPending();
+  S.active=false; stopRec(); try{ speechSynthesis.cancel(); }catch(e){}
+  try{ wake && wake.release(); }catch(e){}
+  const dur=elapsed();
+  $('#drive').hidden=true; $('#setup').hidden=true; $('#writing').hidden=false; S.state='think';
+  if(!S.imported && S.cfg.lang){ const bye = S.cfg.lang==='ar-SA' ? 'تمام، بكتب لك المحضر الحين.' : "Got it. Writing your minutes now."; speakOut(bye); }
+  const you=S.turns.filter(t=>t.who==='you').map(t=>t.text).join(' ');
+  let m=null;
+  if(you.trim().length<10){ m={title:S.cfg.topic||'Drive session', summary:'Too little was captured to write minutes.', key_ideas:[], decisions:[], actions:[], open_questions:[], next_steps:[]}; }
+  else{
+    const prompt=`Write the minutes of a solo thinking session. ${S.imported?'Moe recorded himself thinking out loud; this is the raw speech-to-text transcript.':'Moe talked an idea through with NOUS (an AI thinking partner) while driving; the transcript is speech-to-text and may contain misheard words.'} Infer meaning, fix obvious mishearings, never invent facts.
+${S.cfg.topic?`Topic: ${S.cfg.topic}\n`:''}
+TRANSCRIPT:
+${S.imported ? S.turns[0].text.slice(0,150000) : convo(150000)}
+
+Write in ${S.cfg.momLang}${S.cfg.momLang==='Arabic'?' (clear Modern Standard Arabic, professional)':''}. Capture HIS ideas first; include NOUS's input only where he built on it. Concrete, no filler.
+
+Reply with ONLY JSON:
+{"title":"short title","summary":"3-5 sentences","key_ideas":[{"idea":"...","why":"one sentence"}],"decisions":["..."],"actions":[{"task":"...","due":"or TBD"}],"open_questions":["..."],"next_steps":["..."]}`;
+    try{ m=parseJSON(await callClaude(S.cfg.mmom, prompt, 3500)); if(!m) throw new Error('unreadable'); }
+    catch(e){ toast('Could not write the minutes: '+esc(e.message.slice(0,80))); m={title:S.cfg.topic||'Drive session', summary:'The minutes could not be generated. Your transcript is below.', key_ideas:[], decisions:[], actions:[], open_questions:[], next_steps:[]}; }
+  }
+  $('#writing').hidden=true; S.state='listen';
+  renderMom(m, dur);
+  try{ localStorage.removeItem('nousd.session'); }catch(e){}
+  S.finishing=false;
+}
+let MOM_TEXT='';
+function renderMom(m, dur){
+  const rtl=S.cfg.momLang==='Arabic', d=rtl?'rtl':'ltr';
+  const date=new Date().toLocaleDateString(rtl?'ar-SA':'en-GB',{weekday:'long',day:'numeric',month:'long'});
+  const sec=(l,inner)=>inner?`<section><h4 class="label">${l}</h4>${inner}</section>`:'';
+  const ul=a=>a&&a.length?`<ul>${a.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'';
+  const L=rtl?{s:'الملخص',k:'أبرز الأفكار',dc:'القرارات',a:'المهام',q:'أسئلة مفتوحة',n:'الخطوات التالية'}:{s:'Summary',k:'Key ideas',dc:'Decisions',a:'Actions',q:'Open questions',n:'Next steps'};
+  $('#mom').innerHTML=`<article class="doc" dir="${d}">
+    <span class="label">${rtl?'محضر جلسة':'Minutes'} · NOUS</span>
+    <h2>${esc(m.title)}</h2><div class="meta">${esc(date)} · ${mmss(dur)}</div>
+    ${sec(L.s,`<p>${esc(m.summary)}</p>`)}
+    ${sec(L.k,(m.key_ideas||[]).map((k,i)=>`<p><b style="font-weight:500;color:var(--ink)">${i+1}. ${esc(k.idea)}</b><br><span style="color:var(--dim)">${esc(k.why)}</span></p>`).join(''))}
+    ${sec(L.dc,ul(m.decisions))}
+    ${sec(L.a,ul((m.actions||[]).map(a=>a.task+(a.due&&a.due!=='TBD'?` — ${a.due}`:''))))}
+    ${sec(L.q,ul(m.open_questions))}
+    ${sec(L.n,ul(m.next_steps))}
+    <div class="acts">
+      <button class="primary" id="mMail" type="button">${rtl?'أرسل لإيميلي':'Email me'}</button>
+      <button id="mCopy" type="button">${rtl?'انسخ':'Copy'}</button>
+      <button id="mNew" type="button">${rtl?'جلسة جديدة':'New session'}</button>
+    </div>
+  </article>`;
+  $('#mom').hidden=false; $('#mom').scrollTop=0;
+  const T=[m.title, `${date} · ${mmss(dur)}`, '', L.s.toUpperCase(), m.summary||'', ''];
+  if(m.key_ideas&&m.key_ideas.length){ T.push(L.k.toUpperCase()); m.key_ideas.forEach((k,i)=>T.push(`${i+1}. ${k.idea} — ${k.why}`)); T.push(''); }
+  [[L.dc,m.decisions],[L.a,(m.actions||[]).map(a=>a.task+(a.due&&a.due!=='TBD'?' — '+a.due:''))],[L.q,m.open_questions],[L.n,m.next_steps]].forEach(([l,a])=>{ if(a&&a.length){ T.push(l.toUpperCase()); a.forEach(x=>T.push('• '+x)); T.push(''); } });
+  T.push('—', rtl?'الحوار كاملاً:':'Full conversation:', S.imported ? S.turns[0].text : S.turns.map(x=>`${x.who==='you'?'Moe':'NOUS'}: ${x.text}`).join('\n'));
+  MOM_TEXT=T.join('\n');
+  $('#mMail').onclick=()=>{ location.href=`mailto:${encodeURIComponent(S.cfg.email||'')}?subject=${encodeURIComponent((rtl?'محضر: ':'Minutes: ')+m.title)}&body=${encodeURIComponent(MOM_TEXT)}`; };
+  $('#mCopy').onclick=async()=>{ try{ await navigator.clipboard.writeText(MOM_TEXT); toast(rtl?'تم النسخ.':'Copied.'); }catch(e){ toast('Copy blocked.'); } };
+  $('#mNew').onclick=()=>{ $('#mom').hidden=true; $('#setup').hidden=false; $('#importBox').hidden=true; $('#importTx').value=''; $('#resumeBtn').hidden=true; };
+}
+</script>
+</body>
+</html>
